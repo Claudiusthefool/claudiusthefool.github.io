@@ -1,3 +1,30 @@
+/* .weather-container {
+    background-color: #ccc;
+    text-align: center;
+} */
+
+.city {
+    font-size: 52px;
+    margin: 0;
+}
+
+.weather {
+    font-size: 22px;
+    margin: 0;
+}
+
+.temp {
+    font-size: 60px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.aqi {
+    font-size: 60px;
+    margin: 0;
+    font-weight: bold;
+}
+
 body {
     margin: 60px auto;
     width: 70%;
