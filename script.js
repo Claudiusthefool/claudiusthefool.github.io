@@ -28,10 +28,10 @@ $.getJSON("https://www.purpleair.com/json?show=6014", function(data){
 
 var city = "San Francisco";
 
-$.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=7568515c86637d3b269c029ce8b3cdf9#", function(data){
+$.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=7568515c86637d3b269c029ce8b3cdf9#", function(data){
  console.log(data);
 
-var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+var icon = "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
 var temp = Math.floor(data.main.temp);
 var weather = data.weather[0].main;
 
