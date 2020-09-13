@@ -1,5 +1,5 @@
 
-/* AQI conditions js 
+/* AQI conditions js */
 
 $.getJSON("https://www.purpleair.com/json?show=6014", function(data){
  
@@ -22,7 +22,7 @@ $.getJSON("https://www.purpleair.com/json?show=6014", function(data){
     
       $('.aqi').append(aqifloor);
 
-    }); */
+    }); 
 
 /* Weather conditions js */
 
