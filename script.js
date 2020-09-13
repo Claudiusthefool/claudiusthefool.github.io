@@ -1,5 +1,30 @@
 
-/* Weather conditions js
+/* AQI conditions js */
+
+$.getJSON("https://www.purpleair.com/json?show=6014", function(data){
+ 
+    var pm25 = data.results[0].PM2_5Value;
+    var aqi;
+    
+    if (pm25 <= 12) {
+        aqi = (50/12)*(pm25);
+      } else if ((pm25>12) && (pm25 <= 35.4)) {
+        aqi = ((49/23.3)*(pm25-12.1))+51;
+      } else if ((pm25>35.5) && (pm25 <= 55.4)) {
+        aqi = ((49/20)*(pm25-35.3))+101;
+      } else if ((pm25>55.5) && (pm25 <= 150.4)) {
+        aqi = ((49/94.9)*(pm25-55.5))+151;
+      }
+    
+      aqifloor=Math.round(aqi);
+
+      console.log(pm25);
+    
+      $('.aqi').append(aqifloor);
+
+    });
+
+/* Weather conditions js */
 
 var city = "San Francisco";
 
@@ -15,29 +40,6 @@ $('.city').append(city);
 $('.weather').append(weather);
 $('.temp').append(temp);
 
-console.log(icon); */
-
-
-/* AQI conditions js */
-
-$.getJSON("https://www.purpleair.com/json?show=6014", function(data){
- 
-var pm25 = data.results[0].PM2_5Value;
-var aqi;
-
-if (pm25 <= 12) {
-    aqi = (50/12)*(pm25);
-  } else if ((pm25>12) && (pm25 <= 35.4)) {
-    aqi = ((49/23.3)*(pm25-12.1))+51;
-  } else if ((pm25>35.5) && (pm25 <= 55.4)) {
-    aqi = ((49/20)*(pm25-35.3))+101;
-  } else if ((pm25>55.5) && (pm25 <= 150.4)) {
-    aqi = ((49/94.9)*(pm25-55.5))+151;
-  }
-
-  aqifloor=Math.floor(aqi);
-
-  $('.aqi').append(aqifloor);
+/* console.log(icon); */
 
 });
-

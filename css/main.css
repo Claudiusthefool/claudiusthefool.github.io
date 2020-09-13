@@ -4,25 +4,23 @@
 } */
 
 .city {
-    font-size: 52px;
+    font-size: 30px;
     margin: 0;
 }
 
 .weather {
-    font-size: 22px;
+    font-size: 30px;
     margin: 0;
 }
 
 .temp {
-    font-size: 60px;
+    font-size: 30px;
     margin: 0;
-    font-weight: bold;
 }
 
 .aqi {
-    font-size: 40px;
+    font-size: 30px;
     margin: 0;
-    font-weight: bold;
 }
 
 body {
