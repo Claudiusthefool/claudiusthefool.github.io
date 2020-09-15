@@ -14,7 +14,7 @@ $.getJSON("https://www.purpleair.com/json?show=6014", function(data){
         aqi = ((49/20)*(pm25-35.3))+101;
       } else if ((pm25>55.5) && (pm25 <= 150.4)) {
         aqi = ((49/94.9)*(pm25-55.5))+151;
-      }
+      } 
     
       aqifloor=Math.round(aqi);
 
